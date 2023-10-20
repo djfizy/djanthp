@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 110;
+}
+
+div.desc {
+  padding: 0px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  float: right;
+  background-color: green;
+    color: white;
+ border-radius: 10px 10px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 5px;
+  margin-top: 8px;
+  font-size: 17px;
+  border-radius: 10px 10px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 10px 15px;
+  margin-top: 15px;
+  margin-right: 5px;
+  background: green;
+  font-size: 20px;
+  border-radius: 10px 10px;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+</style>
+
+<body>
+  
+	<title> DJAN:Chapter Gallery</title>
+	<marquee width="100%" direction="left" height="100px">
+
+<h1>WELCOME TO DEEJAY ASSOCIATION OF NIGERIA DELTA CHAPTER : GALLERY</h1>
+</marquee>
+</head>
+
+	<style>
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: blue;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: blue;
+  width: 30%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/*FOR BG IMAGE*/
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+</style>
+
+<div class="topnav">
+
+  <div class="search-container">
+    <form action="https://djanonline.com/member/Profile/searchmember" method="POST">
+      <input type="text" placeholder="Stage name without space" name="search">
+      <input type="hidden" name="csrf_test_name" value="41a211a7acf2a0ec0958a8e714fd7a2b">
+
+      <button type="submit" name='submit'><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div class="topnav">
+  <a class="active" href="#">Djan Member Search</a></div>
+
+</div>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="ETHIOPE EAST.html">Chapter Gallery</a>
+  <div class="dropdown">
+    <button class="dropbtn">EXTRAS 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="software.html">Softwares</a>
+      <a href="scratch.html">Learn Scratch</a>
+      <a href="constitution.html">DJAN Constitution</a>
+    </div>
+  </div> 
+</div>
+
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    <img src="pics/1.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc"><p class="p1"> <b>DJ GENTLE <br>CHAPTER COORDINATOR</b></p></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <img src="pics/2.jpg" alt="Forest" width="600" height="400">
+    <div class="desc"><p class="p1"> <b>DJ MATT<br> CHAPTER PRO</b></p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/dj x.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class="p1"><b>DJ X <br> UNIT COORDINATOR </b></p></div>
+  </div>
+
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/4.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class=" p1"><b>DJ MILLION PLUS <br> SPEAKER OF THE HOUSE </b></p></div>
+  </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/3.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class="p1"><b>DJ FIZY <br>UNIT PRO </b></p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/13.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class="p1"><b>CORSS SECTION <br>UNIT MEMBERS WITH CHAPT. EXCOS </b></p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/6.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class="p1"><b>FUN TIME <br>AFTER MEETING </b></p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+         <img src="pics/DJAN.jpeg" alt="Northern Lights" width="600" height="400">
+    <div class="desc"><p class="p1"><b>CORSS SECTION <br>UNIT MEMBERS WITH CHAPT. EXCOS </b></p></div>
+  </div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+
+
+
+<!-- <style>
+body 
+
+
+
+
+/*GALLERY*/
+
+/*div.gallery {
+  margin: 5px;
+  border: 1px Solid #ccc;
+  float: center;
+  width: 180px;*/
+}/*
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}*/
+</style>
+
+<div class="gallery">
+  
+    <img src="Pics/1.jpg" alt="Cinque Terre" width="600" height="400">
+
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+ 
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+ 
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div> -->
+
+
+</body>
+</html>
